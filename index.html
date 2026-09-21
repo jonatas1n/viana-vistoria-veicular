@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Viana Vistoria Veicular: atendimento para carros, motos, caminhões e frotas em Viana, Espírito Santo.">
+  <meta name="theme-color" content="#0f2b48">
+  <title>Viana Vistoria Veicular | Viana - ES</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0f2b48',
+            ink: '#0d1c2f',
+            industrial: '#4059aa',
+            signal: '#0284c7',
+            mist: '#e6eeff',
+            canvas: '#f8f9ff'
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          boxShadow: {
+            soft: '0 16px 44px rgba(15,43,72,.11)'
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { -webkit-font-smoothing: antialiased; }
+    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24; }
+    .technical-grid {
+      background-image:
+        radial-gradient(circle at 88% 15%, rgba(64,89,170,.18), transparent 30%),
+        linear-gradient(rgba(15,43,72,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,43,72,.045) 1px, transparent 1px);
+      background-size: auto, 28px 28px, 28px 28px;
+    }
+    :focus-visible { outline: 3px solid rgba(2,132,199,.45); outline-offset: 3px; }
+  </style>
+</head>
+<body class="bg-canvas font-sans text-ink">
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-blue-100 bg-white/95 backdrop-blur-xl">
+    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <a href="#inicio" class="flex min-w-0 items-center gap-3" aria-label="Viana Vistoria Veicular - início">
+        <svg viewBox="0 0 64 64" class="h-11 w-11 shrink-0" role="img" aria-label="Símbolo Viana Vistoria">
+          <defs><linearGradient id="logo-gradient" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#0f2b48"/><stop offset="1" stop-color="#4059aa"/></linearGradient></defs>
+          <rect width="64" height="64" rx="15" fill="url(#logo-gradient)"/>
+          <path d="M12 34c2-7 7-11 15-11h12c8 0 12 4 14 11l1 6H11l1-6Z" fill="#fff"/>
+          <circle cx="22" cy="45" r="5" fill="#38bdf8"/><circle cx="44" cy="45" r="5" fill="#38bdf8"/>
+          <circle cx="48" cy="17" r="10" fill="#0284c7" stroke="#fff" stroke-width="2"/>
+          <path d="m43 17 3 3 6-7" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+        </svg>
+        <span class="min-w-0">
+          <strong class="block truncate text-sm font-extrabold tracking-tight text-navy sm:text-lg">VIANA VISTORIA</strong>
+          <span class="block truncate text-[9px] font-bold tracking-[.16em] text-slate-500 sm:text-[10px]">VEICULAR LTDA • VIANA - ES</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-7 lg:flex" aria-label="Navegação principal">
+        <a href="#servicos" class="text-sm font-semibold text-slate-600 transition hover:text-navy">Serviços</a>
+        <a href="#publicos" class="text-sm font-semibold text-slate-600 transition hover:text-navy">Para empresas</a>
+        <a href="#estrutura" class="text-sm font-semibold text-slate-600 transition hover:text-navy">Estrutura</a>
+        <a href="#contato" class="text-sm font-semibold text-slate-600 transition hover:text-navy">Contato</a>
+        <a href="tel:+552732550000" class="inline-flex min-h-11 items-center gap-2 rounded-xl bg-navy px-5 py-3 text-sm font-bold text-white transition hover:bg-industrial">
+          <span class="material-symbols-outlined text-xl">call</span>
+          (27) 3255-0000
+        </a>
+      </nav>
+
+      <button id="menu-button" type="button" class="grid size-11 place-items-center rounded-xl bg-mist text-navy lg:hidden" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden border-t border-blue-100 bg-white px-4 py-4 shadow-xl lg:hidden" aria-label="Navegação móvel">
+      <div class="mx-auto flex max-w-7xl flex-col">
+        <a href="#servicos" class="rounded-lg px-3 py-3 font-semibold">Serviços</a>
+        <a href="#publicos" class="rounded-lg px-3 py-3 font-semibold">Para empresas</a>
+        <a href="#estrutura" class="rounded-lg px-3 py-3 font-semibold">Estrutura</a>
+        <a href="#contato" class="rounded-lg px-3 py-3 font-semibold">Contato</a>
+        <a href="tel:+552732550000" class="mt-2 rounded-xl bg-navy px-4 py-3 text-center font-bold text-white">Ligar: (27) 3255-0000</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-20">
+    <aside class="bg-navy px-4 py-2.5 text-white">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center text-xs font-bold sm:justify-between">
+        <span class="flex items-center gap-2"><span class="size-2 rounded-full bg-sky-400"></span> ATENDIMENTO EM VIANA • VEÍCULOS LEVES E PESADOS</span>
+        <a href="tel:+552732550000" class="font-mono text-blue-100 hover:text-white">CENTRAL: (27) 3255-0000</a>
+      </div>
+    </aside>
+
+    <section id="inicio" class="technical-grid overflow-hidden">
+      <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[1.12fr_.88fr] lg:px-8 lg:py-24">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-2 text-xs font-bold uppercase tracking-[.12em] text-industrial shadow-sm">
+            <span class="material-symbols-outlined text-lg">verified</span>
+            Vistoria veicular em Viana - ES
+          </div>
+          <h1 class="mt-6 max-w-4xl text-4xl font-extrabold leading-[1.08] tracking-[-.045em] text-navy sm:text-5xl lg:text-6xl">
+            Precisão técnica para o seu veículo <span class="text-industrial">seguir em frente.</span>
+          </h1>
+          <p class="mt-6 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+            Atendimento organizado para carros, motos, caminhões e frotas, com inspeção criteriosa e orientação clara em cada etapa.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="#agendamento" class="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl bg-industrial px-6 py-4 font-bold text-white shadow-lg shadow-blue-900/15 transition hover:-translate-y-0.5 hover:bg-navy">
+              <span class="material-symbols-outlined">calendar_month</span>
+              Solicitar atendimento
+            </a>
+            <a href="tel:+552732550000" class="inline-flex min-h-14 items-center justify-center gap-2 rounded-xl border border-blue-200 bg-white px-6 py-4 font-bold text-navy transition hover:border-navy">
+              <span class="material-symbols-outlined">call</span>
+              Falar com a central
+            </a>
+          </div>
+          <div class="mt-9 grid max-w-2xl grid-cols-3 gap-3">
+            <div class="rounded-xl bg-white p-4 shadow-sm"><strong class="font-mono text-lg text-navy">Leves</strong><span class="mt-1 block text-xs text-slate-500">Carros e motos</span></div>
+            <div class="rounded-xl bg-white p-4 shadow-sm"><strong class="font-mono text-lg text-industrial">Pesados</strong><span class="mt-1 block text-xs text-slate-500">Caminhões e carretas</span></div>
+            <div class="rounded-xl bg-white p-4 shadow-sm"><strong class="font-mono text-lg text-navy">Frotas</strong><span class="mt-1 block text-xs text-slate-500">Fluxo empresarial</span></div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="absolute -inset-5 -z-10 rotate-3 rounded-[2rem] bg-blue-100"></div>
+          <div class="overflow-hidden rounded-[1.75rem] border border-white bg-white shadow-soft">
+            <div class="flex items-center justify-between bg-navy px-5 py-4 text-white">
+              <span class="font-mono text-xs">TERMINAL DE INSPEÇÃO</span>
+              <span class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold"><span class="size-2 rounded-full bg-sky-400"></span> OPERACIONAL</span>
+            </div>
+            <div class="p-6 sm:p-8">
+              <div class="grid place-items-center rounded-2xl bg-mist py-10">
+                <div class="relative">
+                  <span class="material-symbols-outlined text-[112px] text-navy">local_shipping</span>
+                  <span class="absolute -right-3 top-1 grid size-11 place-items-center rounded-full bg-signal text-white ring-4 ring-white"><span class="material-symbols-outlined">document_scanner</span></span>
+                </div>
+                <p class="mt-3 text-center text-sm font-bold text-navy">Estrutura multiveicular</p>
+                <p class="mt-1 text-center text-xs text-slate-500">Do veículo de passeio à operação de frota</p>
+              </div>
+              <div class="mt-5 space-y-3">
+                <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3 text-sm"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-xl text-signal">fact_check</span> Identificação veicular</span><strong class="font-mono text-[10px] text-navy">CONFERÊNCIA</strong></div>
+                <div class="flex items-center justify-between rounded-xl bg-slate-50 p-3 text-sm"><span class="flex items-center gap-2"><span class="material-symbols-outlined text-xl text-signal">shield</span> Processo criterioso</span><strong class="font-mono text-[10px] text-navy">SEGURANÇA</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos" class="bg-white py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <p class="text-sm font-bold uppercase tracking-[.14em] text-industrial">Serviços especializados</p>
+          <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Atendimento para diferentes necessidades</h2>
+          <p class="mt-4 leading-7 text-slate-600">Informe o tipo de processo ao solicitar seu atendimento para receber a orientação adequada.</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <article class="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft">
+            <span class="grid size-12 place-items-center rounded-xl bg-blue-50 text-industrial"><span class="material-symbols-outlined">swap_horiz</span></span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Transferência</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Conferência veicular para processos de compra, venda e transferência de propriedade.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft">
+            <span class="grid size-12 place-items-center rounded-xl bg-blue-50 text-industrial"><span class="material-symbols-outlined">manage_search</span></span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Vistoria cautelar</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Análise técnica para apoiar decisões mais seguras na negociação de veículos.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft">
+            <span class="grid size-12 place-items-center rounded-xl bg-blue-50 text-industrial"><span class="material-symbols-outlined">two_wheeler</span></span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Carros e motos</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Fluxo dedicado a veículos leves, utilitários, motocicletas e ciclomotores.</p>
+          </article>
+          <article class="rounded-2xl border border-slate-200 p-6 transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-soft">
+            <span class="grid size-12 place-items-center rounded-xl bg-blue-50 text-industrial"><span class="material-symbols-outlined">local_shipping</span></span>
+            <h3 class="mt-5 text-lg font-bold text-navy">Veículos pesados</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">Atendimento a caminhões, ônibus, implementos rodoviários e operações de frota.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="publicos" class="bg-navy py-16 text-white sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[.14em] text-sky-300">Atendimento empresarial</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Agilidade para quem movimenta veículos todos os dias.</h2>
+            <p class="mt-5 leading-7 text-blue-100">Despachantes, lojas, transportadoras e gestores de frota podem consultar condições de atendimento diretamente com a central.</p>
+            <a href="tel:+552732550000" class="mt-7 inline-flex min-h-12 items-center gap-2 rounded-xl bg-white px-5 py-3 font-bold text-navy transition hover:bg-blue-50">
+              <span class="material-symbols-outlined">business_center</span>
+              Consultar atendimento empresarial
+            </a>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-3">
+            <article class="rounded-2xl bg-white/10 p-6 ring-1 ring-white/10"><span class="material-symbols-outlined text-3xl text-sky-300">badge</span><h3 class="mt-5 font-bold">Despachantes</h3><p class="mt-2 text-sm leading-6 text-blue-100">Orientação objetiva para processos e documentação.</p></article>
+            <article class="rounded-2xl bg-white/10 p-6 ring-1 ring-white/10"><span class="material-symbols-outlined text-3xl text-sky-300">storefront</span><h3 class="mt-5 font-bold">Lojas e revendas</h3><p class="mt-2 text-sm leading-6 text-blue-100">Organização do fluxo de veículos da operação.</p></article>
+            <article class="rounded-2xl bg-white/10 p-6 ring-1 ring-white/10"><span class="material-symbols-outlined text-3xl text-sky-300">hub</span><h3 class="mt-5 font-bold">Frotistas</h3><p class="mt-2 text-sm leading-6 text-blue-100">Planejamento para veículos leves e pesados.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="estrutura" class="py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="rounded-[1.75rem] bg-mist p-6 sm:p-8">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-2xl bg-white p-5"><span class="material-symbols-outlined text-3xl text-industrial">directions_car</span><strong class="mt-4 block text-navy">Veículos leves</strong><span class="mt-1 block text-xs text-slate-500">Carros, SUVs e utilitários</span></div>
+              <div class="rounded-2xl bg-white p-5"><span class="material-symbols-outlined text-3xl text-industrial">two_wheeler</span><strong class="mt-4 block text-navy">Duas rodas</strong><span class="mt-1 block text-xs text-slate-500">Motos e ciclomotores</span></div>
+              <div class="rounded-2xl bg-white p-5"><span class="material-symbols-outlined text-3xl text-industrial">rv_hookup</span><strong class="mt-4 block text-navy">Caminhões</strong><span class="mt-1 block text-xs text-slate-500">Carga e passageiros</span></div>
+              <div class="rounded-2xl bg-white p-5"><span class="material-symbols-outlined text-3xl text-industrial">local_shipping</span><strong class="mt-4 block text-navy">Implementos</strong><span class="mt-1 block text-xs text-slate-500">Carretas e semi-reboques</span></div>
+            </div>
+          </div>
+          <div>
+            <p class="text-sm font-bold uppercase tracking-[.14em] text-industrial">Estrutura multiveicular</p>
+            <h2 class="mt-3 text-3xl font-extrabold tracking-tight text-navy sm:text-4xl">Um atendimento preparado para diferentes portes.</h2>
+            <p class="mt-5 leading-7 text-slate-600">A Viana Vistoria Veicular atende perfis variados com organização, cuidado e comunicação transparente.</p>
+            <ul class="mt-7 space-y-4">
+              <li class="flex gap-3"><span class="material-symbols-outlined text-signal">check_circle</span><span><strong class="text-navy">Fluxo organizado:</strong> orientação para reduzir dúvidas antes do atendimento.</span></li>
+              <li class="flex gap-3"><span class="material-symbols-outlined text-signal">check_circle</span><span><strong class="text-navy">Análise criteriosa:</strong> inspeção visual e conferência dos itens aplicáveis.</span></li>
+              <li class="flex gap-3"><span class="material-symbols-outlined text-signal">check_circle</span><span><strong class="text-navy">Atendimento direto:</strong> contato telefônico para confirmar serviço, documentos e disponibilidade.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agendamento" class="bg-white py-16 sm:py-20">
+      <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div class="overflow-hidden rounded-[1.75rem] border border-blue-100 shadow-soft">
+          <div class="bg-mist p-6 sm:p-8">
+            <p class="text-sm font-bold uppercase tracking-[.14em] text-industrial">Pré-atendimento</p>
+            <h2 class="mt-2 text-3xl font-extrabold text-navy">Organize as informações antes de ligar</h2>
+            <p class="mt-3 max-w-3xl text-slate-600">Preencha os dados abaixo para montar um resumo. Nenhuma informação é enviada ou armazenada pelo site.</p>
+          </div>
+          <form id="service-form" class="space-y-6 bg-white p-6 sm:p-8">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="block"><span class="mb-2 block text-sm font-bold text-navy">Nome</span><input id="name" required autocomplete="name" class="h-12 w-full rounded-xl border border-slate-300 px-4 transition focus:border-industrial focus:outline-none" placeholder="Seu nome"></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-navy">Placa do veículo</span><input id="plate" required maxlength="8" class="h-12 w-full rounded-xl border border-slate-300 px-4 font-mono uppercase transition focus:border-industrial focus:outline-none" placeholder="ABC1D23"></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-navy">Categoria</span><select id="category" class="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 focus:border-industrial focus:outline-none"><option>Carro ou SUV</option><option>Moto ou ciclomotor</option><option>Caminhão ou ônibus</option><option>Carreta ou implemento</option></select></label>
+              <label class="block"><span class="mb-2 block text-sm font-bold text-navy">Serviço</span><select id="service" class="h-12 w-full rounded-xl border border-slate-300 bg-white px-4 focus:border-industrial focus:outline-none"><option>Vistoria de transferência</option><option>Vistoria cautelar</option><option>Outro — confirmar por telefone</option></select></label>
+            </div>
+            <div class="flex flex-col items-start justify-between gap-4 rounded-2xl bg-slate-50 p-5 sm:flex-row sm:items-center">
+              <p class="max-w-xl text-sm leading-6 text-slate-600"><strong class="text-navy">Importante:</strong> confirme documentos, valores, horários e disponibilidade diretamente com a equipe.</p>
+              <button type="submit" class="inline-flex min-h-12 w-full shrink-0 items-center justify-center gap-2 rounded-xl bg-industrial px-6 py-3 font-bold text-white transition hover:bg-navy sm:w-auto"><span class="material-symbols-outlined">summarize</span>Gerar resumo</button>
+            </div>
+            <div id="form-result" class="hidden rounded-2xl border border-blue-200 bg-blue-50 p-5" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="bg-mist py-16 sm:py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <div class="lg:col-span-1">
+            <p class="text-sm font-bold uppercase tracking-[.14em] text-industrial">Contato</p>
+            <h2 class="mt-3 text-3xl font-extrabold text-navy">Fale com a Viana Vistoria.</h2>
+            <p class="mt-4 leading-7 text-slate-600">Confirme as informações operacionais antes de se deslocar até a unidade.</p>
+          </div>
+          <a href="tel:+552732550000" class="rounded-2xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <span class="grid size-12 place-items-center rounded-xl bg-blue-50 text-industrial"><span class="material-symbols-outlined">call</span></span>
+            <span class="mt-5 block text-sm font-bold uppercase tracking-wider text-slate-500">Central telefônica</span>
+            <strong class="mt-1 block font-mono text-xl text-navy">(27) 3255-0000</strong>
+            <span class="mt-2 block text-sm text-slate-500">Toque para ligar</span>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Viana%20Vistoria%20Veicular%20Viana%20ES" target="_blank" rel="noopener noreferrer" class="rounded-2xl bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-soft">
+            <span class="grid size-12 place-items-center rounded-xl bg-blue-50 text-industrial"><span class="material-symbols-outlined">location_on</span></span>
+            <span class="mt-5 block text-sm font-bold uppercase tracking-wider text-slate-500">Localização</span>
+            <strong class="mt-1 block text-xl text-navy">Viana - Espírito Santo</strong>
+            <span class="mt-2 flex items-center gap-1 text-sm font-bold text-industrial">Buscar rota <span class="material-symbols-outlined text-base">arrow_outward</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-navy px-4 py-10 text-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <strong class="text-lg">Viana Vistoria Veicular</strong>
+        <p class="mt-1 text-sm text-blue-200">Atendimento veicular em Viana, Espírito Santo.</p>
+      </div>
+      <div class="text-sm text-blue-200 sm:text-right">
+        <p>© <span id="year"></span> Viana Vistoria Veicular.</p>
+        <p class="mt-1">Consulte condições e disponibilidade por telefone.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuButton.querySelector('.material-symbols-outlined');
+
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menu');
+      menuIcon.textContent = 'menu';
+    }
+
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+        return;
+      }
+      mobileMenu.classList.remove('hidden');
+      menuButton.setAttribute('aria-expanded', 'true');
+      menuButton.setAttribute('aria-label', 'Fechar menu');
+      menuIcon.textContent = 'close';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+
+    document.getElementById('service-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const plate = document.getElementById('plate').value.trim().toUpperCase();
+      const category = document.getElementById('category').value;
+      const service = document.getElementById('service').value;
+      const result = document.getElementById('form-result');
+
+      result.innerHTML = `
+        <div class="flex items-start gap-3">
+          <span class="material-symbols-outlined text-industrial">fact_check</span>
+          <div>
+            <strong class="text-navy">Resumo de ${name}</strong>
+            <p class="mt-1 text-sm leading-6 text-slate-600">Placa: <span class="font-mono font-bold">${plate}</span> • ${category} • ${service}</p>
+            <a href="tel:+552732550000" class="mt-3 inline-flex items-center gap-2 font-bold text-industrial"><span class="material-symbols-outlined text-lg">call</span>Ligar para (27) 3255-0000</a>
+          </div>
+        </div>`;
+      result.classList.remove('hidden');
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
